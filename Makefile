@@ -25,9 +25,11 @@ HEADER = libft.h
 
 FLAGS = -Wall -Wextra -Werror
 
-rm = rm -f
+rm = rm -rf
 
 all : $(NAME)
+
+ft_atoi.c : ft_atoi.o libft.h
 
 %.o : %.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
